@@ -248,6 +248,68 @@ const BookList = () => {
 };
 ```
 
+-   **Spread Operator**
+
+```js
+const BookList = () => {
+    return (
+        <section className="booklist">
+            {books.map((book) => {
+                return <Book key={book.id} book={book} />;
+            })}
+        </section>
+    );
+};
+// log out {book:{...}}
+```
+
+by not using spread operator:
+
+```js
+const Book = (props) => {
+    console.log(props);
+    const { img, title, author } = props;
+    return (
+        <article className="book">
+            <img src={img} alt="" />
+            <h1>{title}</h1>
+            <h4>{author}</h4>
+        </article>
+    );
+};
+```
+
+**Using spread operator**:
+
+```js
+const BookList = () => {
+    return (
+        <section className="booklist">
+            {books.map((book) => {
+                return <Book key={book.id} {...book} />;
+            })}
+        </section>
+    );
+};
+// log out {...}
+```
+
+thus, this is possible:
+
+```js
+const Book = (props) => {
+    console.log(props);
+    const { img, title, author } = props;
+    return (
+        <article className="book">
+            <img src={img} alt="" />
+            <h1>{title}</h1>
+            <h4>{author}</h4>
+        </article>
+    );
+};
+```
+
 ## 🔹Questions🔹
 
 **Why use bracket for return❔**
