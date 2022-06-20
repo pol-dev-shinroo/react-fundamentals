@@ -9,6 +9,7 @@
 -   [ES6](#5-es6)
 -   [Event Handler](#6-event-handler)
 -   [Named vs. default exports](#7-exporting-in-javascript)
+-   [Netlify](#8-netlifyhttpsappnetlifycom)
 
 ## 1. Folder structure for react app
 
@@ -379,6 +380,13 @@ const Book = () => {
 | ------------- | ------------- |
 | `import {File} from` | `import File from`|
 | name must match exactly | name can be changed |
+
+## 8. [Netlify](https://app.netlify.com)
+
+-   can deploy previews
+-   plain-free site
+-   rollbacks
+-   ability to scale
 
 ## 🔹Questions🔹
 
