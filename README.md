@@ -4,9 +4,9 @@
 
 -   folder structure
 -   JSX
--   Nested Components
+-   Accessing Javascript in the JSX
 
-## folder structure for react app
+## 1. Folder structure for react app
 
 -   **node modules**: where we keep all dependencies (best practice is to ignore this file for git)
 -   **package.json**: it is the manifest file (ex. dependencies),
@@ -24,7 +24,7 @@
         npm build
     ```
 
-## JSX
+## 2. JSX
 
 It provides ways to structure react component using syntax familiar to HTML
 
@@ -63,6 +63,56 @@ const Nested = () => {
 
 -   return single element (ex. Fragment or <></>)
 -   use camelCase for html attributes (ex. className, onClick)
+
+## 3. Accessing Javascript in JSX
+
+Use curly braces (**{}**) to access Javascrpt within JSX
+
+-   **for inline style**
+
+```js
+const App = () => {
+    return;
+    <h1 style={{}}></h1>;
+};
+```
+
+-   **passing variable that returns a value**
+
+```js
+let x = 1;
+const App = () => {
+    return;
+    <h1>{x}</h1>;
+};
+```
+
+-   **invoking functions**
+
+```js
+// can invoke function
+const myFunction = () => {
+    console.log("hello");
+};
+
+const App = () => {
+    return <h1>{myFunction()}</h1>;
+};
+
+const App = () => {
+    return <h1>{console.log(x)}</h1>;
+};
+```
+
+**This does not work!**
+
+```js
+const App = () => {
+return;
+<h1>{let y; console.log(y)}</h1>;
+};
+// cannot create a variable here
+```
 
 ## 🔹Questions🔹
 
