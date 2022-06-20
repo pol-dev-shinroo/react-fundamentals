@@ -2,9 +2,10 @@
 
 ## Preview
 
--   folder structure
--   JSX
--   Accessing Javascript in the JSX
+-   [Folder structure](#1-folder-structure-for-react-app)
+-   [JSX](#2-jsx)
+-   [Accessing Javascript in the JSX](#3-accessing-javascript-in-jsx)
+-   [Props](#4-props)
 
 ## 1. Folder structure for react app
 
@@ -112,6 +113,34 @@ return;
 <h1>{let y; console.log(y)}</h1>;
 };
 // cannot create a variable here
+```
+
+## 4. Props
+
+-   **Javascript function has parameters and arguments, meaning you can pass something into a function**
+
+```js
+const App = (props) => {
+    return <h1>{console.log(props)}</h1>;
+};
+// logs out an empty object which we can access within the JSX component
+```
+
+-   **The name "props" is just the convention**
+
+```js
+const App = (banana) => {
+    return <h1>{console.log(banana)}</h1>;
+};
+```
+
+-   **pass props where you render it**
+
+```js
+const RenderingComponent = () => {
+    return <App banana="value" />;
+};
+// logs out {banana: "value"} at App component
 ```
 
 ## 🔹Questions🔹
