@@ -209,6 +209,45 @@ const BookList = () => {
 };
 ```
 
+-   **Solving unique key issue when mapping**
+
+```js
+// when you have unique id
+const BookList = () => {
+    return (
+        <section className="booklist">
+            {books.map((item) => {
+                const { img, title, author } = item;
+                return (
+                    <Book
+                        key={item.id}
+                        img={img}
+                        title={title}
+                        author={author}
+                    />
+                );
+            })}
+        </section>
+    );
+};
+```
+
+```js
+// when you don't have unique id (need to careful if you dont wish to change the order)
+const BookList = () => {
+    return (
+        <section className="booklist">
+            {books.map((item, idx) => {
+                const { img, title, author } = item;
+                return (
+                    <Book key={idx} img={img} title={title} author={author} />
+                );
+            })}
+        </section>
+    );
+};
+```
+
 ## 🔹Questions🔹
 
 **Why use bracket for return❔**
