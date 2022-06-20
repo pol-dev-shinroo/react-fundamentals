@@ -315,7 +315,7 @@ const Book = (props) => {
 
 [See all react-supported event handlers](https://reactjs.org/docs/events.html)
 
--   **onClick**
+-   **onClick/ onMouseOver/ so many more...**
 
 ```js
 const Book = () => {
