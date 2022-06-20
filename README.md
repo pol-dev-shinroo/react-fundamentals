@@ -7,6 +7,7 @@
 -   [Accessing Javascript in the JSX](#3-accessing-javascript-in-jsx)
 -   [Props](#4-props)
 -   [ES6](#5-es6)
+-   [Event Handler](#6-event-handler)
 
 ## 1. Folder structure for react app
 
@@ -309,6 +310,66 @@ const Book = (props) => {
     );
 };
 ```
+
+## 6. Event Handler
+
+[See all react-supported event handlers](https://reactjs.org/docs/events.html)
+
+-   **onClick**
+
+```js
+const Book = () => {
+    const clickHandler = () => {
+        alert("hello world");
+    };
+    return (
+        <article>
+            <h1
+                onClick={() => {
+                    console.log(title);
+                }}
+            ></h1>
+            <button type="button" onClick={clickHandler}></button>
+        </article>
+    );
+};
+```
+
+<span style="color: red;">Careful!</span>
+The button below does not invoke a function, rather the function will be called once the component is rendered
+
+```js
+<button type="button" onClick={clickHandler()}></button>
+```
+
+**if you need to pass an argument:**
+Instead use arrow function
+
+```js
+<button type="button" onClick={() => clickHandler(argument)}></button>
+```
+
+**to access event objects of button:**
+
+```js
+const Book = () => {
+    const clickHandler = (e) => {
+        console.log(e);
+    };
+    return (
+        <article>
+            <button type="button" onClick={(e) => clickHandler(e)}>
+                first
+            </button>
+            <button type="button" onClick={clickHandler}>
+                second
+            </button>
+        </article>
+    );
+};
+```
+
+-   **onMouseOver**
 
 ## 🔹Questions🔹
 
