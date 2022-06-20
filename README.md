@@ -8,6 +8,7 @@
 -   [Props](#4-props)
 -   [ES6](#5-es6)
 -   [Event Handler](#6-event-handler)
+-   [Named vs. default exports](#7-exporting-in-javascript)
 
 ## 1. Folder structure for react app
 
@@ -369,7 +370,15 @@ const Book = () => {
 };
 ```
 
--   **onMouseOver**
+## 7. Exporting in Javascript
+
+-   It is not unique to React, it is ES6 module
+
+**Named export vs Default export**
+| export | export default |
+| ------------- | ------------- |
+| `import {File} from` | `import File from`|
+| name must match exactly | name can be changed |
 
 ## 🔹Questions🔹
 
