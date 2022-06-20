@@ -20,7 +20,13 @@ const BookList = () => {
                 img={firstBook.img}
                 title={firstBook.title}
                 author={firstBook.author}
-            />
+            >
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+                    similique fugiat, incidunt dignissimos iste veniam molestiae
+                    quasi tenetur beatae quod?
+                </p>
+            </Book>
             <Book
                 img={secondBook.img}
                 title={secondBook.title}
@@ -30,24 +36,14 @@ const BookList = () => {
     );
 };
 
-// const Book = (props) => {
-//     const { img, title, author } = props;
-
-//     return (
-//         <article className="book">
-//             <img src={img} alt="" />
-//             <h1>{title}</h1>
-//             <h4>{author}</h4>
-//         </article>
-//     );
-// };
-
-const Book = ({ img, title, author }) => {
+const Book = ({ img, title, author, children }) => {
+    console.log(children);
     return (
         <article className="book">
             <img src={img} alt="" />
             <h1>{title}</h1>
             <h4>{author}</h4>
+            {children}
         </article>
     );
 };

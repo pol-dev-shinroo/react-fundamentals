@@ -144,6 +144,24 @@ const RenderingComponent = () => {
 // logs out {banana: "value"} at App component
 ```
 
+-   **"children" is a **reserved name** when passing child elements as props**
+
+```js
+const BookList = () => {
+    return (
+        <section className="booklist">
+            <Book>
+                <p>children</p>
+            </Book>
+        </section>
+    );
+};
+
+const Book = ({ children }) => {
+    return <article className="book">{children}</article>;
+};
+```
+
 ## 5. ES6
 
 -   **Destructuring**
