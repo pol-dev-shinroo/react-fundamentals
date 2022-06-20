@@ -6,6 +6,7 @@
 -   [JSX](#2-jsx)
 -   [Accessing Javascript in the JSX](#3-accessing-javascript-in-jsx)
 -   [Props](#4-props)
+-   [ES6](#5-es6)
 
 ## 1. Folder structure for react app
 
@@ -141,6 +142,38 @@ const RenderingComponent = () => {
     return <App banana="value" />;
 };
 // logs out {banana: "value"} at App component
+```
+
+## 5. ES6
+
+-   **Destructuring**
+
+```js
+const Book = (props) => {
+    const { img, title, author } = props;
+
+    return (
+        <article className="book">
+            <img src={img} alt="" />
+            <h1>{title}</h1>
+            <h4>{author}</h4>
+        </article>
+    );
+};
+```
+
+-   **Destructuring in parameter**
+
+```js
+const Book = ({ img, title, author }) => {
+    return (
+        <article className="book">
+            <img src={img} alt="" />
+            <h1>{title}</h1>
+            <h4>{author}</h4>
+        </article>
+    );
+};
 ```
 
 ## 🔹Questions🔹
