@@ -1,8 +1,17 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
 
-function App() {
-    return null;
-}
+const App = () => {
+    return (
+        <>
+            <Person />;
+            <Message />
+        </>
+    );
+};
+
+const Person = () => <h2>John Doe</h2>;
+const Message = () => {
+    return <p>this is my message</p>;
+};
 
 export default App;
