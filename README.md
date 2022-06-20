@@ -194,6 +194,21 @@ const Book = ({ img, title, author }) => {
 };
 ```
 
+-   **Map method**
+
+```js
+const BookList = () => {
+    return (
+        <section className="booklist">
+            {books.map((item) => {
+                const { img, title, author } = item;
+                return <Book img={img} title={title} author={author} />;
+            })}
+        </section>
+    );
+};
+```
+
 ## 🔹Questions🔹
 
 **Why use bracket for return❔**
