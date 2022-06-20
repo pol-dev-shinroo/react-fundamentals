@@ -4,6 +4,7 @@
 
 -   folder structure
 -   JSX
+-   Nested Components
 
 ## folder structure for react app
 
@@ -63,7 +64,9 @@ const Nested = () => {
 -   return single element (ex. Fragment or <></>)
 -   use camelCase for html attributes (ex. className, onClick)
 
-**Question**: **why use bracket for return❔**
+## 🔹Questions🔹
+
+**Why use bracket for return❔**
 
 ```js
 // if you dont use bracket, this might happen:
@@ -72,6 +75,10 @@ const App = () => {
     <h1></h1>;
 };
 ```
+
+**Why choose styled-components over normal .css❔**
+
+-   readability + reusability + expandability + adaptability
 
 ## new terms I've learnt
 
